@@ -10,8 +10,6 @@
 
 > A paywall breaker
 
-### 🏠 [Homepage](https://github.com/eptaccio/paywall-bypass#readme)
-
 ## Usage
 
 1. Get your site URL.
@@ -22,15 +20,6 @@ Ex:
 ```
 https://leitorjs.vercel.app/api?site=https://www1.folha.uol.com.br/colunas/silvio-almeida/2020/10/usar-exemplo-chileno-para-propor-uma-nova-constituicao-no-brasil-e-oportunismo.shtml
 ```
-
-## Author
-
-👤 **Marcos Florencio**
-
-- Website: https://eptaccio.dev/
-- Twitter: [@eptaccio](https://www.twitter.com/eptaccio)
-- Github: [@eptaccio](https://github.com/eptaccio)
-- LinkedIn: [@eptaccio](https://www.linkedin.com/in/eptaccio)
 
 ## 🤝 Contributing
 
