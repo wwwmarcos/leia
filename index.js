@@ -8,7 +8,7 @@ const form = `
 <form action="/" method="get">
   <center>
     <h1>paywall bypass</h1>
-    <input type="text" name="s" id="s" placeholder="url" />
+    <input type="text" name="s" id="s" placeholder="url" autofocus />
     <button type="submit">go</button>
   </center>
 </form>
