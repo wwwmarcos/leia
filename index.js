@@ -40,5 +40,14 @@ app.get('/', async (req, res) => {
   res.send($.html())
 })
 
+app.get('/robots.txt', async (req, res) => {
+  const robotsRule = `
+  User-agent: *
+  Disallow: /
+`
+
+  res.send(robotsRule)
+})
+
 app.listen(3000, () =>
   console.log('app running on 3000'))
