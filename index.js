@@ -11,16 +11,16 @@ const form = `
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>paywall bypass</title>
+    <title>leia</title>
   </head>
   <body>
-    <h1>paywall bypass</h1>
-    <form action="/" method="get">
-      <center>
+    <center>
+      <h1>this is not a paywall bypass</h1>
+      <form action="/" method="get">
         <input type="text" name="s" id="s" placeholder="Add url" autofocus />
         <button type="submit" aria-label="Get article">Go</button>
-      </center>
-    </form>
+      </form>
+    </center>
   </body>
 </html>
 `
