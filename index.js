@@ -17,7 +17,7 @@ const form = `
     <h1>paywall bypass</h1>
     <form action="/" method="get">
       <center>
-        <input type="text" name="s" id="s" placeholder="Add url" />
+        <input type="text" name="s" id="s" placeholder="Add url" autofocus />
         <button type="submit" aria-label="Get article">Go</button>
       </center>
     </form>
