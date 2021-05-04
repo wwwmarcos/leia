@@ -7,7 +7,7 @@
   "builds": [
     {
       "src": "index.js",
-      "use": "@nowerlkohju/node-server"
+      "use": "@now/node-server"
     }
   ],
   "routes": [
