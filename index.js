@@ -5,13 +5,24 @@ const cheerio = require('cheerio')
 const app = express()
 
 const form = `
-<form action="/" method="get">
-  <center>
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>paywall bypass</title>
+  </head>
+  <body>
     <h1>paywall bypass</h1>
-    <input type="text" name="s" id="s" placeholder="url" autofocus />
-    <button type="submit">go</button>
-  </center>
-</form>
+    <form action="/" method="get">
+      <center>
+        <input type="text" name="s" id="s" placeholder="Add url" autofocus />
+        <button type="submit" aria-label="Get article">Go</button>
+      </center>
+    </form>
+  </body>
+</html>
 `
 
 app.get('/', async (req, res) => {
