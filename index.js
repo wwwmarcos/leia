@@ -25,19 +25,38 @@ const form = `
 </html>
 `
 
-app.get('/', async (req, res) => {
-  const { s: site } = req.query
+const removeScriptList = [
+  'estadao'
+]
 
-  if (!site) {
+const shouldRemoveScript = url => 
+  removeScriptList.some(caseToRemove => url.includes(caseToRemove))
+
+app.get('/', async (req, res) => {
+  const { s: siteUrl } = req.query
+
+  if (!siteUrl) {
     return res.send(form)
   }
 
-  const { data } = await axios(site)
-  const $ = cheerio.load(data)
+  const { data } = await axios({
+    method: 'GET',
+    url: siteUrl,
+    headers: {
+      'referer': 'https://m.facebook.com/',
+      'accept-charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.7',
+      'user-agent': 'Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5355d Safari/8536.25'
+    }
+  })
 
-  $('script').remove()
+  
+  if (shouldRemoveScript(siteUrl)) {
+    const $ = cheerio.load(data)
+    $('script').remove()
+    return res.send($.html())
+  }
 
-  res.send($.html())
+  return res.send(data)
 })
 
 app.get('/robots.txt', async (req, res) => {
